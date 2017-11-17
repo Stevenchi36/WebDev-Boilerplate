@@ -1,0 +1,4 @@
+/* Make sure images have alt text */
+img:not([alt]){
+    border: 5px dashed #c00;
+}
