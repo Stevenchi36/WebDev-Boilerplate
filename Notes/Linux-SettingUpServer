@@ -1,0 +1,32 @@
+Steps for setting up a server for the web:
+    1. Create server (with public key if possible)
+    2. Login to server through SSH
+    3. Create a new user
+        # adduser *username*
+    4. Give user root privileges
+        # usermod -aG sudo *username*
+    5. Add public key authentication
+        a. Create public/private key pair
+        b. Change into new user
+            # su - *username*
+        c. Create a directory called .ssh
+            # mkdir ~/.ssh
+        d. Restrict this directories permissions
+            # chmod 700 ~/.ssh
+        e. Open a file called authorized_keys withing ~/.ssh
+            # vim ~/.ssh/authorized_keys
+        f. Paste public key inside of this file and save
+        g. Restrict permission of this new file
+            # chmod 600 ~/.ssh/authorized_keys
+    6. Disable password authentication
+        a. Open the SSH daemon configuration as root or sudo user
+            # sudo vim /etc/ssh/sshd_config
+        b. Find PasswordAuthentication, deleting the preceding #, then change its value to "no" and save
+        c. Be sure PubkeyAuthentication is set to "yes" and ChallengeResponseAuthentication is set to "no"
+        d. Reload the SSH daemon
+            # sudo systemctl reload sshd
+
+        
+Add a shortcut to folder:
+    # ln -s /var/www/html site
+            *target*      *shortcut name*
