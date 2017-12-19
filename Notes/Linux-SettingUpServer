@@ -25,7 +25,12 @@ Steps for setting up a server for the web:
         c. Be sure PubkeyAuthentication is set to "yes" and ChallengeResponseAuthentication is set to "no"
         d. Reload the SSH daemon
             # sudo systemctl reload sshd
-
+    7. Set up basic firewall
+        a. Make sure the firewall allows SSH connections
+            # sudo ufw allow OpenSSH
+        b. Enable the firewall
+            # sudo ufw enable
+        c. 
         
 Add a shortcut to folder:
     # ln -s /var/www/html site
