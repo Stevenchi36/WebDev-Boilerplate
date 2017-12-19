@@ -30,7 +30,10 @@ Steps for setting up a server for the web:
             # sudo ufw allow OpenSSH
         b. Enable the firewall
             # sudo ufw enable
-        c. 
+            press y
+        c. View status
+            # sudo ufw status
+        
         
 Add a shortcut to folder:
     # ln -s /var/www/html site
