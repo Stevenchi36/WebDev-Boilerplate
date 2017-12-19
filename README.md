@@ -29,3 +29,12 @@
     </ul>
   </li>
 </ul>
+
+<h2>Notes</h2>
+<ul>
+  <li>Linux-SettingUpServer
+    <ul>
+      <li>How to initially set up a server</li>
+    </ul>
+  </li>
+</ul>
